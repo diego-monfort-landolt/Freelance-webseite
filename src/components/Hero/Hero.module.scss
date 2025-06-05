@@ -1,0 +1,218 @@
+@import '../../styles/variables';
+
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  object-fit: cover;
+  background-image: url('https://cdn.pixabay.com/photo/2020/09/04/08/02/cityscape-5543224_640.jpg');
+  background-repeat: no-repeat;     
+  background-size: cover;
+  object-fit: contain;
+  background-attachment: fixed;
+  background-position: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom, 
+      rgba(10, 10, 10, 0.842) 0%, 
+      rgba(18, 18, 18, 0.801) 50%,
+      $bg-darker 100%
+    );
+    z-index: 0;
+  }
+  
+  @media (max-width: 768px) {
+    min-height: 600px;
+    padding: 0 1rem;
+    background-position: 60% center;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  padding: 2rem;
+  
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+  color: white;
+  
+  @media (max-width: 992px) {
+    font-size: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 2.25rem;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.highlight {
+  background: linear-gradient(to right, #ffffff, $primary-light);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: block;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #e0e0e0;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+  
+  @media (max-width: 992px) {
+    font-size: 1.375rem;
+  }
+  
+  @media (max-width: 768px) {
+    font-size: 1.125rem;
+  }
+}
+
+.cta {
+  display: inline-block;
+  background: $primary;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(124, 77, 255, 0.3);
+    background: scale-color($primary, $lightness: -10%);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 3;
+  
+  span {
+    font-size: 0.875rem;
+    color: #b0b0b0;
+    margin-bottom: 0.5rem;
+  }
+  
+  div {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s ease;
+    
+    &:hover {
+      background: rgba(124, 77, 255, 0.3);
+    }
+    
+    svg {
+      width: 24px;
+      height: 24px;
+      color: white;
+    }
+  }
+}
+// Füge dies in deine bestehende Hero.module.scss ein
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  
+  @media (max-width: 480px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.cta {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  
+  &.primary {
+    background: $primary;
+    color: white;
+    
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(124, 77, 255, 0.3);
+      background: scale-color($primary, $lightness: -10%);
+    }
+  }
+  
+  &.secondary {
+    background: transparent;
+    color: $primary;
+    border: 2px solid $primary;
+    
+    &:hover {
+      transform: translateY(-3px);
+      background: rgba(124, 77, 255, 0.1);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}

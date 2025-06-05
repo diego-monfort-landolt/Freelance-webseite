@@ -1,0 +1,63 @@
+@import '../../styles/variables';
+
+.footer {
+  background-color: $bg-darker;
+  padding: 3rem 0 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.brand {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: $primary;
+  }
+  
+  p {
+    color: $text-secondary;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 1.5rem;
+  
+  a {
+    color: $text-secondary;
+    transition: color 0.3s ease;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+
+.copyright {
+  text-align: center;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  
+  p {
+    font-size: 0.875rem;
+    color: $text-secondary;
+  }
+}
