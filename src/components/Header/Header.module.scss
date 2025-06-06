@@ -15,7 +15,6 @@
     backdrop-filter: blur(10px);
   }
 }
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -24,7 +23,6 @@
   margin: 0 auto;
   padding: 0 1.5rem;
 }
-
 .logo {
   font-size: 1.5rem;
   font-weight: 700;
@@ -33,7 +31,6 @@
     color: $primary;
   }
 }
-
 .desktopNav {
   ul {
     display: flex;
@@ -70,7 +67,6 @@
     display: none;
   }
 }
-
 .menuToggle {
   background: none;
   border: none;
@@ -83,7 +79,6 @@
     display: block;
   }
 }
-
 .mobileNav {
   background-color: $bg-darker;
   width: 100%;

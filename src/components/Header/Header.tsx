@@ -81,9 +81,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
                 <a 
                   href={`#${item.id}`}
                   className={activeSection === item.id ? styles.active : ''}
-                  onClick={() => setActiveSection(item.id)}
-                  
-                  
+                  onClick={() => setActiveSection(item.id)}               
                 >
                   {item.label}
                 </a>
@@ -96,5 +94,4 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
     </header>
   )
 }
-
 export default Header

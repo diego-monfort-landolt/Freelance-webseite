@@ -10,9 +10,6 @@ const Hero = () => {
       servicesSection.scrollIntoView({ behavior: 'smooth' })
     }
   }
-
-  // NEUE Funktion zum Scrollen zum Kontaktformular
-
   return (
     <section className={styles.hero} id="home">
       <div className={styles.content}>
@@ -33,9 +30,7 @@ const Hero = () => {
           Webentwicklung & Social Media Management für anspruchsvolle Kunden
         </motion.p>
         
-        <div className={styles.buttonGroup}>
-        
-          
+        <div className={styles.buttonGroup}>        
           {/* Button 2: Scrollt zu Services */}
           <motion.button
             className={`${styles.cta} ${styles.secondary}`}
@@ -49,8 +44,7 @@ const Hero = () => {
             Unsere Leistungen
           </motion.button>
         </div>
-      </div>
-      
+      </div>    
       <div className={styles.scrollIndicator} onClick={scrollToServices}>
         <span>Mehr erfahren</span>
         <motion.div
@@ -63,5 +57,4 @@ const Hero = () => {
     </section>
   )
 }
-
 export default Hero
